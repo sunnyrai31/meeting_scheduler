@@ -1,0 +1,36 @@
+<div class="calender-section">
+        <div id='calendar'></div>
+</div>
+
+<!-- meeting scheduler popup -->
+<div class="modal fade" id="createEventModal" role="dialog">
+	<div class="modal-dialog modal-sm">
+	  <!-- Modal content-->
+	  <div class="modal-content modal-sm">
+	    <div class="modal-header">
+	      <a class="close" data-dismiss="modal">&times;</a>
+	      <h4>Create Appointment</h4>
+	    </div>
+	    <div class="modal-body">
+	      <div class="row">
+              <div class="col-md-12">
+                <input type="text" name="patientName" id="patientName" tyle="margin: 0 auto;" data-provide="typeahead" data-items="4" data-source="[&quot;Value 1&quot;,&quot;Value 2&quot;,&quot;Value 3&quot;]">
+                  <input type="text" id="apptStartTime"/>
+                  <input type="text" id="apptEndTime"/>
+                  <input type="hidden" id="apptAllDay" />
+
+                  <div class="control-group">
+		            <label class="control-label" for="when">When:</label>
+		            <div class="controls controls-row" id="when" style="margin-top:5px;">
+		            </div>
+		        </div>
+              </div>
+           </div>
+	    </div>
+	    <div class="modal-footer">
+	        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+	        <button type="submit" class="btn btn-primary" (click)="createMeeting()">Save</button>
+	    </div>
+	  </div>
+	</div>
+</div>
